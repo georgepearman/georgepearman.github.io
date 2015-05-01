@@ -513,6 +513,7 @@
 												<h3>Position, Velocity, Torque</h3>
 												<div class="row">
 													<div class="col-md-6">
+                                                        <p>This plot displays expected step response of the system to a 5 deg initial disturbance. The transient response demonstrates the characteristics of a 0.5 sec rise time with a 1.5 sec settle time as expected. This also demonstrates that the observer converges an order of magnitude faster than the plant, which is desired to ensure proper transient response.</p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/5degcatch.png" alt="">
@@ -550,6 +551,7 @@
 												<h3>Simulated Values from MatLab</h3>
 												<div class="row">
 													<div class="col-md-6">
+                                                        <p>As a check on the dynamics of the system, the momentum of the disc and cube (as well as the total) was plotted against time for the same 5 deg step disturbance. This plot demonstrates the convergence of the momentum to zero as time passes the settling time of 1.5 sec.</p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/5degmomentum.png" alt="">
@@ -575,7 +577,7 @@
 									</div>
 									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">5 Deg Voltage Sim</a>
 								</div>
-								<!-- Modal -->
+									<!-- Modal -->
 								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
 									<div class="modal-dialog modal-lg">
 										<div class="modal-content">
@@ -587,7 +589,7 @@
 												<h3>Simulated values from MatLab</h3>
 												<div class="row">
 													<div class="col-md-6">
-                                                        <p></p>
+                                                        <p>These plots demonstrate that the maximum power the motor can output (according to a linear model of the motor) will not be exceeded by this control setup. It also demonstrates that the desired voltage for this step response will be at maximum 8V, which is exactly the amount that our 3000 mAh battery can supply. </p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/5degvoltage.png" alt="">
@@ -601,9 +603,86 @@
 									</div>
 								</div>
 								<!-- Modal end -->
-							</div>
+                            </div>
 
+                            <div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/electromagnet.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-9">
+											<i class="fa fa-search-plus"></i>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">Electromagnetic Brake</a>
+								</div>
+									<!-- Modal -->
+								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-9-label">Electromagnetic Brake</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Brake with PWM control!</h3>
+												<div class="row">
+													<div class="col-md-6">
+                                                        <p>Servos are pretty regular, and our little Cubie wanted to be extraordinary. We thought that magnets were pretty cool, and wanted the ability to fine tune the performance and stopping power. We chose to use an electromagnet so that we could use PWM control! To implement the PWM, we had to use an opamp and a mosfet to supply the electromagnet with enough current (the myRIO can't put out enough as it is) and to switch it using the myRIO.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/electromagnet.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+                             </div>
+
+
+                             <div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/new_encoder.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-10">
+											<i class="fa fa-search-plus"></i>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Cube Position Encoder</a>
+								</div>
+									<!-- Modal -->
+								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-10-label">TITLE1</h4>
+											</div>
+											<div class="modal-body">
+												<h3>More data is always better!</h3>
+												<div class="row">
+													<div class="col-md-6">
+                                                        <p>As we've had problems with the accelerometer, we sometimes us a separate rotary encoder to get cube position values. While the accelerometer has been susceptible to vibration noise, the rotary encoder is more resilient to vibrations and noise. We've been able to get much better data and have been able to compare the data from the accelerometer, gyroscope, and encoder.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/new_encoder.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+                            </div>
 						</div>
+				    </div>
 
 				<div class="space"></div>
 				<div class="col-md-6" >
