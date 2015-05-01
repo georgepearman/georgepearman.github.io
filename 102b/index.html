@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Companion Cube | 102B</title>
+		<meta name="description" content="A cool 102B project">
+		<meta name="author" content="George Pearman">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="css/animations.css" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Custom css -->
+		<link href="css/custom.css" rel="stylesheet">
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="about" class="title text-center">Companion <span>Cube</span></h1>
+						<p class="lead text-center">Why build a regular cube when it could balance?</p>
+						<div class="space"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<img src="images/section-image-1.png" alt="">
+								<div class="space"></div>
+							</div>
+							<div class="col-md-6">
+                                <p>We built a cool cube that balances using a steel flywheel, brushless motor, and eletromagnetic brake.</p>
+                                <p>This cube has many cool features including:</p>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A "jumping" feature</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A cool electromagnetic brake</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A visually appealing GUI</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A nice portable size</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Easily controllable over a network </li>
+								</ul>
+							</div>
+						</div>
+						<div class="space"></div>
+						<h2>Concept</h2>
+						<div class="row">
+							<div class="col-md-6">
+                                <p>Our concept was inspired by the ETH Zurich Cubli demonstration video and paper published in 2012 and 2013. Rather than try to recreate their experiment and system by using the same hardware and published control scheme, our overall goal was to create an inertia wheel inverted pendulum system with a completely original design and at a much lower cost than the original Cubli project. To achieve this, we decided to design and create a complete system from scratch, including the hardware, control system, and selection of electronic components.</p>
+                                                <p>The original project was intended to be a three dimensional cube, with a one dimensional, pivot based system as a testing platform for the control system, electronics, and hardware. After creating the initial 1D system, we decided for cost and time reasons to stick with a 1D system for the final project. The platform consists of three basic subsystems: chassis, power, and brake.</p>
+							</div>
+						<div class="halfspace"></div>
+
+							<div class="col-md-6">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+													Hardware Design - Motor
+												</a>
+											</h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body">
+                                                <p>At the heart of the system is the power subsystem, which is based around the SuperTigre 370 brushless electronic motor, which is run via direct drive via a mid shaft to the steel flywheel. The shaft is a machined aluminum piece that attaches with 8-32 set screws to the motor output shaft and is supported on the opposite side by a double sealed bearing rated to 20,000 RPM. The shaft also has a spur gear attached via 8-32 set screws that drives a second spur gear mounted to the shaft of the rotary encoder. This drivetrain is required to gear down the rotation of the motor and flywheel from a maximum of 5000 RPM to within the operating range of the rotary encoder. The rotary encoder does not contain any mounting points that would work within the packaging requirements, so therefore a pillow block was machined from aluminum in order to mount the encoder. The flywheel was designed to match the ideal moment of inertia and mass as calculated within the control system. It was first waterjet and then turned from a 1/2-inch thick sheet of plain carbon steel. It is attached to the mid shaft with 8-32 set screws and sits on milled flats on the shaft.</p>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													Hardware Design - Brake
+												</a>
+											</h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+                                                <p>The brake subsystem consists of an electromagnet brake that is attached to the side plate via a CNC machined aluminum sliding assembly.  The slider was assembled with a press-fit bronze oilite bushing and a light coat of oil for lubrication. The sliding mechanism was machined with a high level of precision in order to assure a tight tolerance and a proper sliding joint. The mechanism was required to not bind under the sideways loading that would result from using the brake against a rotating flywheel. The electromagnet is also attached to the baseplate with a spring to ensure that the magnet slides back and away from the steel flywheel when the brake is disengaged. The brake mechanism was shimmed using thin 3/16-inch (10-32) washers in order to adjust the brake height above the flywheel surface. The gap was adjusted closer to allow the electromagnet to jump out and grab the flywheel from its resting state with a power level that was safe to protect the structural integrity of the shaft, motor, and bearing.</p>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													Hardware Design - Chassis
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+                                                <p>The chassis subsystem supports all of the parts of the power and brake subsystems. The main portions of the subsystem are two side plates cut by waterjet from 1/8-inch aluminum sheet. These are held together by 3/8-inch diameter turned aluminum shafts that have ends threaded to accept 10-32 socket cap head screws. The clearance holes on the side plates were post-machined after waterjet in order to assure a perfectly parallel and tight assembly when the power assembly (motor, mid shaft, and main bearing) were assembled with the side plates and rods. The non-drive side plate is a simple design, with the main shaft bearing press fit in the center of the plate and cutouts in order to see the mechanical action of the flywheel and encoder gear train. The drive side plate is more complex, with the plate following the same basic design of the non-drive side plate, but with added hardpoints for the motor, encoder pillow block, and the accelerometer+gyroscope board. This data acquisition board was mounted with 2-56 screws and standoffs and aligned with the edges of the square side plate for accurate angle measurement. The entire chassis subassembly is attached to the base board by a pivot, constructed with a CNC aluminum base hinge block, a machined shaft, and four small bearings that are pressed into each side plate and the base block.</p>
+                                                <p>We ran into only a small number of problems with the original system, which we changed and made modifications to for the final system. In the original system, a non-double sealed bearing with a lower RPM rating introduced excess noise and vibration into the system. Moving to a larger diameter, double sealed, and high RPM rated main bearing solved this problem. Secondly, the original system was sized larger than necessary for the required flywheel, and therefore was heavier and more difficult for the system to balance. Designing a smaller more optimized flywheel allowed the side plates to be made smaller, lighter, and more aesthetically pleasing. Finally, the original main bearing was inferior than the current one, and introduced excess play in the mid shaft. By switching to the better bearing and machining the side plates to a very tight tolerance, this ensured that the mid shaft was normal to the side plates and that the flywheel was parallel with the side plates. The alignment of the flywheel was critical to reduce vibrations and noise in the accelerometer data and improve the performance and consistency of the brake.</p>
+
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingFour">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+													Control Scheme
+												</a>
+											</h4>
+										</div>
+										<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+											<div class="panel-body">
+												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingFive">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+													Sensors
+												</a>
+											</h4>
+										</div>
+										<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+											<div class="panel-body">
+                                                <p>The observer in our control model relies on three key values: flywheel velocity, cube angular position, and cube angular velocity.  We used a rotary encoder to observe flywheel position and used software to derive flywheel velocity.  While the rotary encoder uses interrupts that leverage the FPGA of the myRio, we found that the myRio’s timing resolution was not as fine as we would have liked.  In order to get smoother flywheel velocity values, we used a sliding window of 50 ms.</p>
+                                                <p>We used a LSM9DS0 IMU breakout board to sense cube angular position.  This particular chip was chosen for its popularity in the Arduino community.  The breakout board is cheap ($20), and has great documentation online from people who have made the board work with a number of devices.  While no one has published instructions for using the LSM9DS0 with the myRio, we were able to work out the required steps after reading some Arduino instructions and tutorials.  We communicate with the board using the I2C interface, which reducing the number of wires going to the cube, and reduces any noise that we might see with analog signal wires.</p>
+                                                <p>To determine cube angular position from the LSM9DS0 board, we combined accelerometer and gyro data with a complementary filter.  Additionally, we have an encoder attached to the cube’s pivot.  This allowed us to investigate any error that might be present from our IMU.</p>
+
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingSix">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+													GUI
+												</a>
+											</h4>
+										</div>
+										<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+											<div class="panel-body">
+												Richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section translucent-bg bg-image-1 blue">
+			<div class="container object-non-visible" data-animation-effect="fadeIn">
+				<h1 id="services"  class="text-center title">Main Challenges</h1>
+				<div class="space"></div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">Sourcing a motor controller</h4>
+								<p>It was hard, we blew some up</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-cog"></i>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">Simulating a control scheme</h4>
+								<p>Control schemes rock</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-check"></i>
+							</div>
+						</div>
+					</div>
+					<div class="space visible-xs"></div>
+					<div class="col-sm-6">
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-leaf"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Balancing a cube</h4>
+                                <p> its hard, maybe regular cubes are the way to go? </p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-area-chart"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Jumping up</h4>
+								<p>Gravity is a bitch</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="default-bg space blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1 class="text-center">Control Systems!</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section">
+			<div class="container">
+                <h1 class="text-center title" id="portfolio">Some Pictures<sup>3</sup></h1>
+				<div class="separator"></div>
+				<p class="lead text-center">Here's some proof that our project worked at some point</p>
+				<br>
+				<div class="row object-non-visible" data-animation-effect="fadeIn">
+					<div class="col-md-12">
+
+						<!-- portfolio items start -->
+						<div class="isotope-container row grid-space-20">
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-1.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-1">
+											<i class="fa fa-search-plus"></i>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-1">The accel is wired up!</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-1" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-1-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-2.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-2">
+											<i class="fa fa-search-plus"></i>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">Matt Debugs the Accel</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-labelledby="project-2-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-2-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-2.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-3.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-3">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">Debugging PWM Signals</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-3-label">Using an Oscilloscopt to Debug PWM Signals</h4>
+											</div>
+											<div class="modal-body">
+												<h3>You gotta set the trigger right!</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-3.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-4.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-4">
+											<i class="fa fa-search-plus"></i>
+											<span>Site Building</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">asdf Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-4-label">Using an Oscilloscope to Debug PWM Signals</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Using an Oscilloscope to Debug PWM Signals</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-4.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-5.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-5">
+											<i class="fa fa-search-plus"></i>
+											<span>App Development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-5-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-5.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-6.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-6">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-6">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-labelledby="project-6-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-6-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-6.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-7.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-7">
+											<i class="fa fa-search-plus"></i>
+											<span>Site Building</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-7-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-7.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-8.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-8">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-8-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-8.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-9.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-9">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-9-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-9.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-10.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-10">
+											<i class="fa fa-search-plus"></i>
+											<span>Site Building</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-10-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-10.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-11.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-11">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-11-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-11.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/portfolio-12.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-12">
+											<i class="fa fa-search-plus"></i>
+											<span>App Development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-12-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/portfolio-12.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+						</div>
+						<!-- portfolio items end -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section translucent-bg bg-image-2 pb-clear">
+			<div class="container object-non-visible" data-animation-effect="fadeIn">
+				<h1 id="clients" class="title text-center">Testimonials</h1>
+				<div class="space"></div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="media testimonial">
+							<div class="media-left">
+								<img src="images/gpearman.png" alt="">
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Best Cube Ever!</h3>
+								<blockquote>
+                                    <p>I used to have a nonbalancing cube. Now that I've seen the balancing cube, I can't imagine going back to using a regular cube.</p>
+									<footer>George Pearman</footer>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<div class="media testimonial">
+							<div class="media-left">
+								<img src="images/mdethlefsen.png" alt="">
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Yeah!</h3>
+								<blockquote>
+									<p>Woooooooooooooo balancing cube!</p>
+									<footer>Matt Dethlefsen</footer>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="media testimonial">
+							<div class="media-left">
+								<img src="images/bmitchell.png" alt="">
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">What an inspiring project</h3>
+								<blockquote>
+									<p>I bet this has all sorts of applications in the field of robotics! </p>
+									<footer>Brendan Mitchell</footer>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<div class="media testimonial">
+							<div class="media-left">
+								<img src="images/ltruong.png" alt="">
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">I like it</h3>
+								<blockquote>
+									<p>I really do.</p>
+                                    <footer>Long Truong</footer>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		<!-- footer start -->
+		<!-- ================ -->
+			</div>
+
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<footer id="footer">
+
+			<!-- ================ -->
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">102b Project 2015.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .subfooter end -->
+
+		</footer>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+
+		<!-- Backstretch javascript -->
+		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+
+	</body>
+</html>
