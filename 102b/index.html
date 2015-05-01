@@ -67,28 +67,83 @@
 							</div>
 						</div>
 						<div class="space"></div>
-						<h2>Concept</h2>
 						<div class="row">
 							<div class="col-md-6">
-                                <p>Our concept was inspired by the ETH Zurich Cubli demonstration video and paper published in 2012 and 2013. Rather than try to recreate their experiment and system by using the same hardware and published control scheme, our overall goal was to create an inertia wheel inverted pendulum system with a completely original design and at a much lower cost than the original Cubli project. To achieve this, we decided to design and create a complete system from scratch, including the hardware, control system, and selection of electronic components.</p>
-                                                <p>The original project was intended to be a three dimensional cube, with a one dimensional, pivot based system as a testing platform for the control system, electronics, and hardware. After creating the initial 1D system, we decided for cost and time reasons to stick with a 1D system for the final project. The platform consists of three basic subsystems: chassis, power, and brake.</p>
+						        <h2>Concept</h2>
+                                <p>Our concept was inspired by the ETH Zurich Cubli demonstration
+                                video and paper published in 2012 and 2013. Rather than try to
+                                recreate their experiment and system by using the same hardware and
+                                published control scheme, our overall goal was to create an inertia
+                                wheel inverted pendulum system with a completely original design and
+                                at a much lower cost than the original Cubli project. To achieve
+                                this, we decided to design and create a complete system from
+                                scratch, including the hardware, control system, and selection of
+                                electronic components.</p>
+                                <p>The original project was intended to
+                                be a three dimensional cube, with a one dimensional, pivot based
+                                system as a testing platform for the control system, electronics,
+                                and hardware. After creating the initial 1D system, we decided for
+                                cost and time reasons to stick with a 1D system for the final
+                                project. The platform consists of three basic subsystems: chassis,
+                                power, and brake.</p>
+						        <h2>Applications and Future Implementation</h2>
+                                <p>This control system has many applications and thus became a point
+                                of interest and study for the Companion Cube team. This sort of
+                                momentum reaction wheel technology can be implemented on spaceships
+                                (where easily controllable reaction forces are often difficult to
+                                create), exo-skeletal bionics, and eventually even motorcycles. The
+                                investigation and research that this team conducted demonstrated the
+                                difficulty of obtaining reliable and usable data from a system with
+                                such high rotational frequencies. If given more time, more study and
+                                design would be given to isolation of the sensors from the motor
+                                vibrations as well as mitigating the overall vibrations themselves.
+                                </p>
+                                <p>As far as the controller is concerned, state feedback
+                                control appeared to be sufficient and very useful during the
+                                simulation phase, and allowed for easy tuning during the initial
+                                stages of testing. It will be necessary to explore PD, PID, and LQR
+                                based control schemes (among others) before determining exactly
+                                which control scheme is best suited for this application. </p>
+
 							</div>
-						<div class="halfspace"></div>
 
 							<div class="col-md-6">
 								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									<div class="panel panel-default">
+                                    <div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingOne">
 											<h4 class="panel-title">
-												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-													Hardware Design - Motor
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													Hardward Design - Motor
 												</a>
 											</h4>
 										</div>
-										<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 											<div class="panel-body">
-                                                <p>At the heart of the system is the power subsystem, which is based around the SuperTigre 370 brushless electronic motor, which is run via direct drive via a mid shaft to the steel flywheel. The shaft is a machined aluminum piece that attaches with 8-32 set screws to the motor output shaft and is supported on the opposite side by a double sealed bearing rated to 20,000 RPM. The shaft also has a spur gear attached via 8-32 set screws that drives a second spur gear mounted to the shaft of the rotary encoder. This drivetrain is required to gear down the rotation of the motor and flywheel from a maximum of 5000 RPM to within the operating range of the rotary encoder. The rotary encoder does not contain any mounting points that would work within the packaging requirements, so therefore a pillow block was machined from aluminum in order to mount the encoder. The flywheel was designed to match the ideal moment of inertia and mass as calculated within the control system. It was first waterjet and then turned from a 1/2-inch thick sheet of plain carbon steel. It is attached to the mid shaft with 8-32 set screws and sits on milled flats on the shaft.</p>
-											</div>
+                                                <p>At the heart of the system is the power
+                                                subsystem, which is based around the SuperTigre 370
+                                                brushless electronic motor, which is run via direct
+                                                drive via a mid shaft to the steel flywheel. The
+                                                shaft is a machined aluminum piece that attaches
+                                                with 8-32 set screws to the motor output shaft and
+                                                is supported on the opposite side by a double sealed
+                                                bearing rated to 20,000 RPM. The shaft also has
+                                                a spur gear attached via 8-32 set screws that drives
+                                                a second spur gear mounted to the shaft of the
+                                                rotary encoder. This drivetrain is required to gear
+                                                down the rotation of the motor and flywheel from
+                                                a maximum of 5000 RPM to within the operating range
+                                                of the rotary encoder. The rotary encoder does not
+                                                contain any mounting points that would work within
+                                                the packaging requirements, so therefore a pillow
+                                                block was machined from aluminum in order to mount
+                                                the encoder. The flywheel was designed to match the
+                                                ideal moment of inertia and mass as calculated
+                                                within the control system. It was first waterjet and
+                                                then turned from a 1/2-inch thick sheet of plain
+                                                carbon steel. It is attached to the mid shaft with
+                                                8-32 set screws and sits on milled flats on the
+                                                shaft.</p>
+                                            </div>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -116,8 +171,20 @@
 										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
                                                 <p>The chassis subsystem supports all of the parts of the power and brake subsystems. The main portions of the subsystem are two side plates cut by waterjet from 1/8-inch aluminum sheet. These are held together by 3/8-inch diameter turned aluminum shafts that have ends threaded to accept 10-32 socket cap head screws. The clearance holes on the side plates were post-machined after waterjet in order to assure a perfectly parallel and tight assembly when the power assembly (motor, mid shaft, and main bearing) were assembled with the side plates and rods. The non-drive side plate is a simple design, with the main shaft bearing press fit in the center of the plate and cutouts in order to see the mechanical action of the flywheel and encoder gear train. The drive side plate is more complex, with the plate following the same basic design of the non-drive side plate, but with added hardpoints for the motor, encoder pillow block, and the accelerometer+gyroscope board. This data acquisition board was mounted with 2-56 screws and standoffs and aligned with the edges of the square side plate for accurate angle measurement. The entire chassis subassembly is attached to the base board by a pivot, constructed with a CNC aluminum base hinge block, a machined shaft, and four small bearings that are pressed into each side plate and the base block.</p>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeTwo" aria-expanded="false" aria-controls="collapseThreeTwo">
+													Hardware Design - Design Interations
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThreeTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeTwo">
+											<div class="panel-body">
                                                 <p>We ran into only a small number of problems with the original system, which we changed and made modifications to for the final system. In the original system, a non-double sealed bearing with a lower RPM rating introduced excess noise and vibration into the system. Moving to a larger diameter, double sealed, and high RPM rated main bearing solved this problem. Secondly, the original system was sized larger than necessary for the required flywheel, and therefore was heavier and more difficult for the system to balance. Designing a smaller more optimized flywheel allowed the side plates to be made smaller, lighter, and more aesthetically pleasing. Finally, the original main bearing was inferior than the current one, and introduced excess play in the mid shaft. By switching to the better bearing and machining the side plates to a very tight tolerance, this ensured that the mid shaft was normal to the side plates and that the flywheel was parallel with the side plates. The alignment of the flywheel was critical to reduce vibrations and noise in the accelerometer data and improve the performance and consistency of the brake.</p>
-
 											</div>
 										</div>
 									</div>
@@ -165,12 +232,28 @@
 										</div>
 										<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
 											<div class="panel-body">
-												Richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic.
+                                                <p>The GU for the project was developed in order to allow for ease of tuning as well as a clean display of all the important outputs and states of the system. The GUI allows the user 3 main options: Balance, Jump/Balance, and Jump/Idle. The first assumes the user has placed the cube at the balance point and the control simply takes over and keeps it balanced. The second jumps the cube up from a resting state and then proceeds to balance a cube while the Jump/Idle option simply jumps the cube to the other resting state and returns the cube to the Idle state (waiting for the next command). Unfortunately, only the Jump/Idle state has been fully tested as the balancing mode was not implemented as the angular position of the cube could not be accurately determined.</p>
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingSeven">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+													Labview Implementation
+												</a>
+											</h4>
+										</div>
+										<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+											<div class="panel-body">
+                                                <p>This system was implemented in LabVIEW so that the software could be run on the NI myRIO. The use of the visual style of coding allowed for simple diagrams that even those individuals who are not versed in any true coding language can understand. This makes the product more versatile as enthusiasts are able to work on the code themselves and personalize their Comapnion Cube. </p>
+                                                <p>While the feedback loop was not as straightforward in LabVIEW as in MATLAB, it was still easily achieved and was able to respond to inputs from the actual plant. LabVIEW was also used to interface with I2C output of the accelerometer and gyro so that the digital data could be obtained.</p>
+
+											</div>
+										</div>
+									</div>
+                                </div>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -201,7 +284,7 @@
 								<p>Control schemes rock</p>
 							</div>
 							<div class="media-right">
-								<i class="fa fa-check"></i>
+								<i class="fa fa-area-chart"></i>
 							</div>
 						</div>
 					</div>
@@ -209,7 +292,7 @@
 					<div class="col-sm-6">
 						<div class="media">
 							<div class="media-left">
-								<i class="fa fa-leaf"></i>
+								<i class="fa fa-codepen"></i>
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Balancing a cube</h4>
@@ -218,7 +301,7 @@
 						</div>
 						<div class="media">
 							<div class="media-left">
-								<i class="fa fa-area-chart"></i>
+								<i class="fa fa-child"></i>
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Jumping up</h4>
@@ -341,7 +424,6 @@
 										<img src="images/portfolio-3.jpg" alt="">
 										<a class="overlay" data-toggle="modal" data-target="#project-3">
 											<i class="fa fa-search-plus"></i>
-											<span>Web Design</span>
 										</a>
 									</div>
 									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">Debugging PWM Signals</a>
