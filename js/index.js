@@ -1,8 +1,6 @@
 /*
   Oh hello there, code inspector!
   I see you looking through my source.  Very sneaky!
-  Why not just email me, or check out my GitHub?
-  github.com/dhruvarora
 */
 
 var colors = ['#ab4642','#27ae60','#d32542','#ff7f19',
