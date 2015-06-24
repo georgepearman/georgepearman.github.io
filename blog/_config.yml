@@ -2,7 +2,7 @@
 
 title:            Europe Trip 2015
 locale:           en_US
-url:              
+url:              http://www.georgepearman.com/blog
 
 
 # Jekyll configuration
@@ -29,7 +29,7 @@ owner:
   name: George Pearman
   avatar: bio-photo.jpg
   bio: "Describe your self."
-  email: 
+  email: georgepearman@me.com
   disqus-shortname: 
   twitter: #username
   facebook: #username
