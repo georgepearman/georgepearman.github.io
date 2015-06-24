@@ -73,18 +73,56 @@ body {
   overflow: hidden;
 }
 
-.intro {
-  position: absolute;
-  left: 25%;
-  top: 50%;
-  padding: 0 20px;
-  padding-bottom:20px;
-  width: 50%;
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right:auto;
-  background:#FFF;
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    .intro {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      padding: 0 10px;
+      padding-bottom:20px;
+      width: 50%;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right:auto;
+      background:#FFF;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* tablets and desktop */
+    .intro {
+      position: absolute;
+      top: 50%;
+      left: 12.5%;
+      padding: 0 10px;
+      padding-bottom:20px;
+      width: 75%;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right:auto;
+      background:#FFF;
+    }
+
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    .intro {
+      position: absolute;
+      left: 0%;
+      top: 50%;
+      padding: 0 20px;
+      padding-bottom:20px;
+      width: 100%;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right:auto;
+      background:#FFF;
+    }
 }
 
 h1 {
