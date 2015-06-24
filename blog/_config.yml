@@ -2,7 +2,8 @@
 
 title:            Europe Trip 2015
 locale:           en_US
-baseurl:              /blog
+url:              http://www.georgepearman.com
+baseurl:          /blog
 
 
 # Jekyll configuration
