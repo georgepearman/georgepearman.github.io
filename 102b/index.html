@@ -55,11 +55,11 @@
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
-                                <p>We built a cool cube that balances using a steel flywheel, brushless motor, and eletromagnetic brake.</p>
-                                <p>This cube has many cool features including:</p>
+                                <p>Companion Cube is your next best friend, and will keep you company by balancing next to you using a steel flywheel, brushless motor, and eletromagnetic brake.</p>
+                                <p>Cubie, as we affectionately call him, just wants to please you with his many excellent features:</p>
 								<ul class="list-unstyled">
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A "jumping" feature</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A cool electromagnetic brake</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A "jumping" mode</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A super slick electromagnetic brake</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A visually appealing GUI</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i> A nice portable size</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Easily controllable over a network </li>
@@ -288,11 +288,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="space visible-xs"></div>
 					<div class="col-sm-6">
 						<div class="media">
 							<div class="media-left">
-								<i class="fa fa-codepen"></i>
+                                <i class="fa fa-codepen"></i>
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Balancing a cube</h4>
@@ -305,7 +304,7 @@
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading">Jumping up</h4>
-								<p>Gravity is a bitch</p>
+								<p>Gravity is the worst</p>
 							</div>
 						</div>
 					</div>
@@ -333,7 +332,7 @@
 			<div class="container">
                 <h1 class="text-center title" id="portfolio">Some Pictures<sup>3</sup></h1>
 				<div class="separator"></div>
-				<p class="lead text-center">Here's some proof that our project worked at some point</p>
+				<p class="lead text-center">Cubie is quite photogenic</p>
 				<br>
 				<div class="row object-non-visible" data-animation-effect="fadeIn">
 					<div class="colza-md-12">
@@ -394,14 +393,13 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-2-label">Project Title</h4>
+												<h4 class="modal-title" id="project-2-label">Matt Debugs the Accel</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3>Angle measurements are critical for control </h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                                                        <p>Accelerometers are really tricky, get started on yours early! We have an IMU and a spare unit, each with a three-axis accelerometer and a three-axis gyro built in together. Amazingly enough for us, both chips decided to continue functioning as gyros but randomly and intermiddently cut out on us. When they were working, we had issues with vibration coming from the motor introducing noise in the accelerometer signal. Here we see Matt debugging the accelerometer by applying a low pass filter.</p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio-2.jpg" alt="">
@@ -439,8 +437,7 @@
 												<h3>You gotta set the trigger right!</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                                                        <p>Our motor controller uses 5V logic, but the myRio only outputs 3.3V.  We implemented a logic shifter using a MOSFET and an opamp voltage follower.  Since our circuit inverts the logic and the motor controller expects a duty cycle between 5% and 10%, we send a duty cycle between 95% and 90%.  The oscilloscope allowed us to debug any problems and confirm that our design worked as expected.</p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/portfolio-3.jpg" alt="">
@@ -510,14 +507,13 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-5-label">Using an Oscilloscope to Debug PWM Signals</h4>
+												<h4 class="modal-title" id="project-5-label">Response to 5 Deg Displacement</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Using an Oscilloscope to Debug PWM Signals</h3>
+												<h3>Position, Velocity, Torque</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                                                        <p>This plot displays expected step response of the system to a 5 deg initial disturbance. The transient response demonstrates the characteristics of a 0.5 sec rise time with a 1.5 sec settle time as expected. This also demonstrates that the observer converges an order of magnitude faster than the plant, which is desired to ensure proper transient response.</p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/5degcatch.png" alt="">
@@ -537,26 +533,25 @@
 								<div class="image-box">
 									<div class="overlay-container">
 										<img src="images/5degmomentum.png" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-5">
+										<a class="overlay" data-toggle="modal" data-target="#project-7">
 											<i class="fa fa-search-plus"></i>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">5 Deg Momentum Sim</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">5 Deg Momentum Sim</a>
 								</div>
 								<!-- Modal -->
-								<div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">
+								<div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">
 									<div class="modal-dialog modal-lg">
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-5-label">Using an Oscilloscope to Debug PWM Signals</h4>
+												<h4 class="modal-title" id="project-5-label">Momentum Response to 5 Deg Displacement</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Using an Oscilloscope to Debug PWM Signals</h3>
+												<h3>Simulated Values from MatLab</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                                                        <p>As a check on the dynamics of the system, the momentum of the disc and cube (as well as the total) was plotted against time for the same 5 deg step disturbance. This plot demonstrates the convergence of the momentum to zero as time passes the settling time of 1.5 sec.</p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/5degmomentum.png" alt="">
@@ -576,26 +571,25 @@
 								<div class="image-box">
 									<div class="overlay-container">
 										<img src="images/5degvoltage.png" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-5">
+										<a class="overlay" data-toggle="modal" data-target="#project-8">
 											<i class="fa fa-search-plus"></i>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">5 Deg Voltage Sim</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">5 Deg Voltage Sim</a>
 								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">
+									<!-- Modal -->
+								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
 									<div class="modal-dialog modal-lg">
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-5-label">Using an Oscilloscope to Debug PWM Signals</h4>
+												<h4 class="modal-title" id="project-8-label">Voltage response to 5 deg displacement</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Using an Oscilloscope to Debug PWM Signals</h3>
+												<h3>Simulated values from MatLab</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+                                                        <p>These plots demonstrate that the maximum power the motor can output (according to a linear model of the motor) will not be exceeded by this control setup. It also demonstrates that the desired voltage for this step response will be at maximum 8V, which is exactly the amount that our 3000 mAh battery can supply. </p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/5degvoltage.png" alt="">
@@ -609,16 +603,108 @@
 									</div>
 								</div>
 								<!-- Modal end -->
-							</div>
+                            </div>
 
+                            <div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/electromagnet.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-9">
+											<i class="fa fa-search-plus"></i>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">Electromagnetic Brake</a>
+								</div>
+									<!-- Modal -->
+								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-9-label">Electromagnetic Brake</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Brake with PWM control!</h3>
+												<div class="row">
+													<div class="col-md-6">
+                                                        <p>Servos are pretty regular, and our little Cubie wanted to be extraordinary. We thought that magnets were pretty cool, and wanted the ability to fine tune the performance and stopping power. We chose to use an electromagnet so that we could use PWM control! To implement the PWM, we had to use an opamp and a mosfet to supply the electromagnet with enough current (the myRIO can't put out enough as it is) and to switch it using the myRIO.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/electromagnet.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+                             </div>
+
+
+                             <div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/new_encoder.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-10">
+											<i class="fa fa-search-plus"></i>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Cube Position Encoder</a>
+								</div>
+									<!-- Modal -->
+								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-10-label">TITLE1</h4>
+											</div>
+											<div class="modal-body">
+												<h3>More data is always better!</h3>
+												<div class="row">
+													<div class="col-md-6">
+                                                        <p>As we've had problems with the accelerometer, we sometimes us a separate rotary encoder to get cube position values. While the accelerometer has been susceptible to vibration noise, the rotary encoder is more resilient to vibrations and noise. We've been able to get much better data and have been able to compare the data from the accelerometer, gyroscope, and encoder.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/new_encoder.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+                            </div>
 						</div>
-						<!-- portfolio items end -->
+				    </div>
+
+				<div class="space"></div>
+				<div class="col-md-6" >
+                                    <iframe width="525" height="394"
+                                        src="https://www.youtube.com/embed/2UHb0_1wNJo?autoplay=1&loop=1&controls=0&playlist=2UHb0_1wNJo"
+                                        frameborder="0" allowfullscreen>
+                                    </iframe>
+				</div>
+				<div class="col-md-6" >
+
+                                    <iframe width="525" height="394"
+                                        src="https://www.youtube.com/embed/c53odLPzyVs?autoplay=1&loop=1&controls=0&playlist=c53odLPzyVs"
+                                        frameborder="0" allowfullscreen>
+                                    </iframe>
+				</div>
 
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- section end -->
+
 
 		<!-- section start -->
 		<!-- ================ -->
