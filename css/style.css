@@ -75,11 +75,11 @@ body {
 
 .intro {
   position: absolute;
-  left: 0;
+  left: 25%;
   top: 50%;
   padding: 0 20px;
   padding-bottom:20px;
-  width: 100%;
+  width: 50%;
   text-align: center;
   display: block;
   margin-left: auto;
@@ -99,9 +99,6 @@ h1 {
 }
 
 #about {
-  width: 50%;
-  margin-left: auto;
-  margin-right:auto;
   -webkit-animation-duration: 3s;
   -webkit-animation-delay: 1s;
 }
