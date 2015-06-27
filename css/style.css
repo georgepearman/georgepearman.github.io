@@ -23,6 +23,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -172,10 +173,6 @@ p {
 	padding: 0 5px;
 	transform-origin: top;
 	perspective: 600px;
-}
-
-.links > a:hover {
-	transform: scale(1.2);
 }
 
 a,
