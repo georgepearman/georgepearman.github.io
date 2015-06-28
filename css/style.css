@@ -74,60 +74,19 @@ body {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 768px) {
-    /* tablets and desktop */
-    .intro {
-      position: absolute;
-      top: 50%;
-      left: 25%;
-      padding: 0 10px;
-      padding-bottom:20px;
-      width: 50%;
-      text-align: center;
-      display: block;
-      margin-left: auto;
-      margin-right:auto;
-      background:#FFF;
-    }
+.outer-div {
+    padding: 30px;
+    position: absolute;
+    top: 40%;
+    width: 100%;
 }
 
-@media only screen and (max-width: 767px) {
-    /* tablets and desktop */
-    .intro {
-      position: absolute;
-      top: 50%;
-      left: 12.5%;
-      padding: 0 10px;
-      padding-bottom:20px;
-      width: 75%;
-      text-align: center;
-      display: block;
-      margin-left: auto;
-      margin-right:auto;
-      background:#FFF;
-    }
+    
 
-}
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    /* portrait phones */
-    .intro {
-      position: absolute;
-      left: 0%;
-      top: 50%;
-      padding: 0 20px;
-      padding-bottom:20px;
-      width: 100%;
-      text-align: center;
-      display: block;
-      margin-left: auto;
-      margin-right:auto;
-      background:#FFF;
-    }
-}
 
 h1 {
-  font-size: 65px;
+  font-size: 70px;
   font-weight: 700;
   letter-spacing: 0.015em;
 
@@ -157,6 +116,27 @@ p {
   padding:5px;
 }
 
+.v-wrap{
+    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+.v-wrap:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    margin-right: -.25em; /*might want to tweak this. .25em for extra white space */
+    height: 100%;
+}
+.v-box{
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    padding: 0 1em;
+    background: #EEE;
+}
+
 .links {
   padding-top: 15px;
 	box-sizing: border-box;
@@ -183,34 +163,48 @@ a:visited {
   font-weight:bold;
 }
 
+.intro {
+  width: 720px;
+  height: auto;
+  text-align: center;
+  display: block;
+  margin:auto;
+  background:#FFF;
+  padding: 0 10px;
+  padding-bottom:20px;
+}
+
 @media only screen and (max-width: 1000px) {
   h1 {
     font-size: 70px;
   }
-}
-
-@media only screen and (max-width: 800px) {
-  h1 {
-    font-size: 48px;
-  }
-  h1::after {
-    height: 8px;
-  }
-}
-
-@media only screen and (max-width: 568px) {
   .intro {
-    padding: 0 10px;
-  }
+      width: 720px;
+      height: auto;
+      text-align: center;
+      display: block;
+      margin:auto;
+      background:#FFF;
+      padding: 0 10px;
+      padding-bottom:10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
   h1 {
     font-size: 30px;
   }
-  h1::after {
-    height: 6px;
-  }
-  p {
-    font-size: 18px;
-  }
+  /* portrait phones */
+    .intro {
+      width: 450px;
+      height: auto;
+      text-align: center;
+      display: block;
+      margin:auto;
+      background:#FFF;
+      padding: 0 10px;
+      padding-bottom:10px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -221,6 +215,3 @@ a:visited {
     height: 4px;
   }
 }
-
-
-
