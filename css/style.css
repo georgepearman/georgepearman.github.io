@@ -201,36 +201,14 @@ a:visited {
   padding-bottom:20px;
 }
 
-@media only screen and (max-width: 1000px) {
-  h1 {
-    font-size: 70px;
-  }
-  .intro {
-      width: 720px;
-      height: auto;
-      text-align: center;
-      display: block;
-      margin:auto;
-      background:#FFF;
-      padding: 0 10px;
-      padding-bottom:10px;
-    }
-}
-
 @media only screen and (max-width: 767px) {
     h1 {
         font-size: 30px;
     }
     .intro {
         width: 350px;
-        height: auto;
-        text-align: center;
-        display: block;
-        margin:auto;
-        margin-top: -200px;
-        background:#FFF;
-        padding: 0 10px;
         padding-bottom:10px;
+        padding-top: 30px;
     }
     .v-wrap {
         height: 50%;
@@ -265,8 +243,13 @@ a:visited {
     h1::after {
         height: 4px;
     }
+    .intro {
+        width: 300px;
+        padding-bottom:10px;
+        padding-top: 20px;
+    }
     .v-wrap {
-        height: 40%;
+        height: 30%;
     }
     .v-box {
         font-size: 60%;
