@@ -126,6 +126,35 @@ p {
     margin-right: -.25em; /*might want to tweak this. .25em for extra white space */
     height: 100%;
 }
+
+.v-wrap-linkedin{
+    height: 85px;
+    text-align: center;
+    white-space: nowrap;
+}
+.v-wrap-linkedin:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    margin-right: -.25em; /*might want to tweak this. .25em for extra white space */
+    height: 100%;
+}
+
+.v-wrap-kloudless{
+    height: 90px;
+    text-align: center;
+    white-space: nowrap;
+}
+.v-wrap-kloudless:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    margin-right: -.25em; /*might want to tweak this. .25em for extra white space */
+    height: 100%;
+}
+
 .v-box{
     display: inline-block;
     vertical-align: middle;
@@ -231,6 +260,12 @@ a:visited {
     .outer-div {
         padding: 0px;
     }
+    .v-wrap-kloudless {
+        height: 80px;
+    }
+    .v-wrap-linkedin {
+        height: 65px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -253,17 +288,23 @@ a:visited {
     }
     .v-box-linkedin {
         font-size: 60%;
-        margin-top: 10px;
+        margin-top: 6px;
         width: 75%;
     }
     .v-box-kloudless {
         font-size: 60%;
-        margin-top: 10px;
+        margin-top: 6px;
         width: 75%;
     }
     .v-box-twitter {
         font-size: 60%;
         margin-top: -10px;
         width: 83%;
+    }
+    .v-wrap-kloudless {
+        height: 65px;
+    }
+    .v-wrap-linkedin {
+        height: 55px;
     }
 }
