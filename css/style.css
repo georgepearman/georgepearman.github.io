@@ -265,4 +265,25 @@ a:visited {
     h1::after {
         height: 4px;
     }
+    .v-wrap {
+        height: 40%;
+    }
+    .v-box {
+        font-size: 60%;
+    }
+    .v-box-linkedin {
+        font-size: 60%;
+        margin-top: 10px;
+        width: 75%;
+    }
+    .v-box-kloudless {
+        font-size: 60%;
+        margin-top: 10px;
+        width: 75%;
+    }
+    .v-box-twitter {
+        font-size: 60%;
+        margin-top: -10px;
+        width: 83%;
+    }
 }
