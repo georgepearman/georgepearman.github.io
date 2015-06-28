@@ -194,9 +194,8 @@ a:visited {
   h1 {
     font-size: 30px;
   }
-  /* portrait phones */
     .intro {
-      width: 450px;
+      width: 90%;
       height: auto;
       text-align: center;
       display: block;
