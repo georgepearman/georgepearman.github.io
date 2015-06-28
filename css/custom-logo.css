@@ -40,6 +40,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media only screen and (max-width: 767px) {
+    [data-icon]:before {
+        font-size: 400%;
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        font-size: 400%;
+    }
+}
+
 .icon-twitter:before {
   content: "a";
 }

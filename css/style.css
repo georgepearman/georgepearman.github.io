@@ -82,10 +82,6 @@ body {
     width: 100%;
 }
 
-    
-
-
-
 h1 {
   font-size: 70px;
   font-weight: 700;
@@ -136,6 +132,36 @@ p {
     white-space: normal;
     padding: 0 1em;
     background: #FFF;
+    margin-top: 100%;
+}
+.v-box-linkedin{
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    padding: 0 1em;
+    background: #FFF;
+    margin-top: 30px;
+    width: 85%;
+}
+
+.v-box-kloudless{
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    padding: 0 1em;
+    background: #FFF;
+    margin-top: 30px;
+    width: 85%;
+}
+
+.v-box-twitter{
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    padding: 0 1em;
+    background: #FFF;
+    margin-top: 10px;
+    width: 85%;
 }
 
 .links {
@@ -192,26 +218,51 @@ a:visited {
 }
 
 @media only screen and (max-width: 767px) {
-  h1 {
-    font-size: 30px;
-  }
+    h1 {
+        font-size: 30px;
+    }
     .intro {
-      width: 90%;
-      height: auto;
-      text-align: center;
-      display: block;
-      margin:auto;
-      background:#FFF;
-      padding: 0 10px;
-      padding-bottom:10px;
+        width: 350px;
+        height: auto;
+        text-align: center;
+        display: block;
+        margin:auto;
+        margin-top: -200px;
+        background:#FFF;
+        padding: 0 10px;
+        padding-bottom:10px;
+    }
+    .v-wrap {
+        height: 50%;
+    }
+    .v-box {
+        font-size: 80%;
+    }
+    .v-box-linkedin {
+        font-size: 80%;
+        margin-top: 10px;
+        width: 75%;
+    }
+    .v-box-kloudless {
+        font-size: 80%;
+        margin-top: 10px;
+        width: 75%;
+    }
+    .v-box-twitter {
+        font-size: 80%;
+        margin-top: -10px;
+        width: 83%;
+    }
+    .outer-div {
+        padding: 0px;
     }
 }
 
 @media only screen and (max-width: 320px) {
-  h1 {
-    font-size: 28px;
-  }
-  h1::after {
-    height: 4px;
-  }
+    h1 {
+        font-size: 28px;
+    }
+    h1::after {
+        height: 4px;
+    }
 }
