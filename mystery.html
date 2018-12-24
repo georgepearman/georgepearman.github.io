@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Pearman Mystery Gift Game</h2>
+
+<script type="text/javascript">
+    function shuffle(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    function f() {
+        people = ["George", "Tessa", "Ab", "Mom", "Dad"]
+
+        shuffle(people)
+
+        s = ""
+        prevPerson = people[people.length - 1]
+        people.forEach(p => {
+            s = s + prevPerson + " -> " + p + "<br/>";
+            prevPerson = p
+        });
+        return s;
+    }
+</script>
+<button type="button" onclick="document.write(f())">Lets Go</button>
+
+</body>
+</html>
+
